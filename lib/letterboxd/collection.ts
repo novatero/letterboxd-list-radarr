@@ -15,10 +15,10 @@ export const getCollection = async (
     const posters = await getKanpai<LetterboxdPoster[]>(
         `${LETTERBOXD_ORIGIN}${ajaxUrl}`,
         [
-            ".poster-list .film-poster",
+            '[data-component-class="globals.comps.LazyPoster"]',
             {
-                slug: ["$", "[data-target-link]"],
-                title: [".image", "[alt]"],
+                slug: ["$", "[data-item-link]"],
+                title: ["$", "[data-item-full-display-name]", "[data-item-name]", "[alt]"],
             },
         ]
     );

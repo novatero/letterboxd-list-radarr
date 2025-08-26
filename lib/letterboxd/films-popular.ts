@@ -51,10 +51,10 @@ export const getFilmsPopularPaginated = async (
     return await getKanpai<LetterboxdPoster[]>(
         `${LETTERBOXD_ORIGIN}/films/ajax/${path}page/${page}/`,
         [
-            ".poster-list .listitem",
+            '[data-component-class="globals.comps.LazyPoster"]',
             {
-                slug: [".poster", "[data-target-link]"],
-                title: ["img", "[alt]"],
+                slug: ["$", "[data-item-link]"],
+                title: ["$", "[data-item-full-display-name]", "[data-item-name]", "[alt]"],
             },
         ]
     );
