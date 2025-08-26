@@ -70,7 +70,7 @@ export const getListPaginated = async (
                 '[data-component-class="globals.comps.LazyPoster"]',
                 {
                     slug: ["$", "[data-item-link]"],
-                    title: ["$", "[data-item-full-display-name]", "[data-item-name]", "[alt]"],
+                    title: ["$", "[data-item-full-display-name]"],
                 },
             ],
         }
