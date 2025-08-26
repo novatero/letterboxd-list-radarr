@@ -69,8 +69,8 @@ export const getListPaginated = async (
             posters: [
                 '[data-component-class="globals.comps.LazyPoster"]',
                 {
-                    slug: ["$", "[data-target-link]"],
-                    title: ["$", "[data-item-name]"],
+                    slug: ["$", "[data-target-link]", "[data-item-link]", "[data-film-link]"],
+                    title:["$", "[data-item-name]", "[data-film-name]", "[alt]"],
                 },
             ],
         }
